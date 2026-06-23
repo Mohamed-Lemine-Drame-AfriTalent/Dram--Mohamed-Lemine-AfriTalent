@@ -1,0 +1,84 @@
+/* le google font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
+
+/* les variables definie dans le root  */
+ /* crées des variables CSS globales accessibles partout dans  fichier CSS */
+:root {
+    --color-primary: #C49D83;
+    --color-secondary: #D5CABC;
+    --color-accent: #BDA18A;
+
+    --color-light: #F5EFE6;
+    --color-dark: #5E4B3C;
+
+    --font-title: 'Playfair Display', serif;
+    --font-body: 'Poppins', sans-serif;
+
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 40px;
+}
+
+/* 2. Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 3. Base (body, textes) */
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+
+}
+
+h1,h2,h3 {
+    font-family: var(--font-title);
+    color: var(--color-dark);
+
+}
+
+/* 4. Navbar  */
+.navbar {
+    /* transition: var(--transition); */
+    padding: 1rem 2rem;
+    transition: 0.3s;
+    background-color: transparent;
+
+
+}
+
+.navbar-nav .nav-link{
+    color: white;
+    font-weight: 500;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+/*effet sur survol sur les liens fait par le hover */
+.navbar-nav .nav-link:hover{
+    color: var(--color-primary);   
+}
+
+/*pour le logo*/
+.navbar-brand img{
+    max-height: 60px; 
+}
+
+ /* le logo AfriTalent situé à gauche de la navbar */
+.navbar .navbar-brand { 
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.navbar.scrolled {
+    background-color: black;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    padding: 5px 0;
+}
