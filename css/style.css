@@ -213,3 +213,360 @@ h1,h2,h3 {
 .stars{
     font-size: 1.2rem;
 }
+
+.cta{
+    position: relative;
+    max-width: 900px;
+    margin: 4rem auto;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.image-cta img{
+    width: 100%;
+    height: 350px; /* réduit la hauteur */
+    object-fit: cover;
+    display: block;
+}
+
+.contenu{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    width: 80%;
+}
+
+.contenu h2{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contenu p{
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-cta{
+    display: inline-block;
+    background: #E8521A;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* assombrit l'image pour mieux lire le texte */
+.cta::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 1;
+}
+
+.freelance-card {
+    background: #151515 !important;
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.freelance-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+
+}
+
+.freelance-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+}
+
+.freelance-card:hover img {
+    transform: scale(1.08);
+}
+
+.freelance-card .text-muted {
+    color: #b5b5b5 !important;
+    font-size: 0.9rem;
+}
+
+.freelance-card p:last-of-type {
+    color: gold;
+    font-size: 1rem;
+}
+
+.freelance-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #00d1ff, #00ff88);
+}
+
+.about-card{
+    background: #151515 !important;
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+.about-card1{
+    
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.about-card:hover{
+     transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+
+}
+.about-card1:hover{
+     transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+
+}
+
+.about-card img{
+     width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+}
+
+.about-card .text-muted {
+    color: #f4eded !important;
+    font-size: 1.5rem;
+}
+
+.footer-title{
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+/* Texte */
+.footer-text{
+  color: #d1d5db;
+  line-height: 1.8;
+}
+/* Liens */
+.footer-links{
+  list-style: none;
+  padding: 0;
+}
+.footer-links li{
+  margin-bottom: 12px;
+}
+.footer-links a{
+  color: #d1d5db;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.footer-links a:hover{
+  color: #3b82f6;
+  padding-left: 5px;
+}
+
+/* Réseaux sociaux */
+.social-icons i{
+  color: white;
+  font-size: 1.5rem;
+  margin-right: 15px;
+  transition: 0.3s;
+}
+
+.social-icons i:hover{
+  color: #3b82f6;
+}
+
+/* Bas du footer */
+.footer-bottom{
+  text-align: center;
+  margin-top: 20px;
+  color: #9ca3af;
+}
+
+.dark-mode{
+    background-color: #121212;
+    color: white;
+}
+
+/* Bouton retour en haut */
+#topBtn{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  transition: 0.3s;
+  z-index: 999;
+}
+
+
+/* Effet hover */
+#topBtn:hover{
+  background-color: #333;
+}
+
+/* Etat initial */
+.fade-in{
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+/* Quand visible */
+.fade-in.show{
+  opacity: 1;
+  transform: translateY(0);
+}
+/* ===================================
+   COMMIT 5 - RESPONSIVE DESIGN
+   =================================== */
+/* =========================
+   DESKTOP 1200px+
+========================= */
+@media (min-width: 1200px){
+
+    .hero-content{
+        gap: 4rem;
+    }
+
+    .cards{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .bento-grid{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+/* =========================
+   TABLETTE 768px
+========================= */
+@media (max-width: 768px){
+
+    .hero-content{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .bento-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .cta{
+        max-width: 95%;
+        
+    }
+    .contenu h2{
+        font-size: 2rem;
+    }
+}
+
+/* =========================
+   MOBILE 375px
+========================= */
+@media (max-width: 375px){
+
+    h1{
+        font-size: 1.8rem;
+    }
+
+    h2{
+        font-size: 1.4rem;
+    }
+
+    h3{
+        font-size: 1rem;
+    }
+
+    .hero{
+        padding: 4rem 1rem;
+    }
+
+    .hero-content{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cards,
+    .bento-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .filter-btn{
+        width: 100%;
+        margin-bottom: .5rem;
+    }
+
+    .navbar-brand img{
+        height: 40px;
+    }
+
+    .image-cta img{
+        height: 250px;
+    }
+
+    .contenu{
+        width: 90%;
+    }
+
+    .contenu h2{
+        font-size: 1.5rem;
+    }
+
+    .contenu p{
+        font-size: .9rem;
+    }
+
+     .card-1,.card-4,.big,.wide{
+        grid-column: span 1;
+    }
+
+    .navbar-nav{
+        text-align: center;
+    }
+
+    .navbar-nav .btn{
+        width: 100%;
+        margin-top: .5rem;
+    }
+
+    iframe{
+        height: 220px;
+    }
+}
+
