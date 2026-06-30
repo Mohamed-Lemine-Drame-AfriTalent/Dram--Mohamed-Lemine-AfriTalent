@@ -1,3 +1,4 @@
+// dark mode en utilisant le toggle qui permet de changer la couleur du body
 const toggleBtn = document.getElementById("theme-toggle");
 if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark-mode");
@@ -13,7 +14,7 @@ toggleBtn.addEventListener("click", () => {
 
 });
 
-
+// c'est la navbar qui permet de scroller 
 const topBtn = document.getElementById("topBtn");
 
 window.addEventListener("scroll", () => {
@@ -69,6 +70,7 @@ const counterObserver = new IntersectionObserver((entries) => {
 counters.forEach(counter => {
     counterObserver.observe(counter);
 });
+// fade-in qui permet de faire quand on scrolle les choses comencent a apparaitre
 const fadeElements = document.querySelectorAll(".fade-in");
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -83,7 +85,7 @@ fadeElements.forEach(el => {
     observer.observe(el);
 });
 
-
+//  la partie filtrage qui permet de filtrer 
 const buttons = document.querySelectorAll(".filter-btn");
 const cards = document.querySelectorAll("#freelancesGrid > div");
 buttons.forEach(button => {
@@ -100,6 +102,7 @@ buttons.forEach(button => {
     });
 });
 
+// Validation du formulaire
 const form = document.getElementById("contactForm");
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -126,7 +129,7 @@ form.addEventListener("submit", (e) => {
     emailError.textContent = "";
     messageError.textContent = "";
     successMessage.textContent = "";
-    sujetError.textContent ="";
+    sujetError.textContent = "";
 
     // Nom obligatoire
     if (name.value.trim() === "") {
@@ -143,7 +146,7 @@ form.addEventListener("submit", (e) => {
     if (!emailPattern.test(email.value)) {
         emailError.textContent = "Veuillez entrer un email valide.";
         valid = false;
-    } 
+    }
     // message obligatoire et au moins 20 caractères
     if (message.value.trim() === "") {
         messageError.textContent = "Le message est obligatoire.";
@@ -153,7 +156,7 @@ form.addEventListener("submit", (e) => {
         valid = false;
     }
 
-     if(sujet.value === ""){
+    if (sujet.value === "") {
         sujetError.textContent = "Veuillez choisir un sujet";
         valid = false;
     }
